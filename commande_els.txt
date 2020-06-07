@@ -1,0 +1,28 @@
+# Ligne de commande ElasticSearch
+
+#### Permet d'avoir la liste des index
+
+curl localhost:9200/_cat/indices
+
+
+#### Permet de charger des fichers JSON dans un nouvel index
+
+elasticsearch_loader --index mon_index --type incident json nom_du_fichier_json.json
+
+
+#### Crée un index
+
+curl -XPUT localhost:9200/mon_index
+
+#### Supprimer un index
+
+curl -X DELETE "localhost:9200/mon_index"
+
+
+#### Pour rechercher
+
+curl localhost:9200/incidents/_search?pretty
+
+
+#### Pour rechercher avec paramètre
+http://localhost:9200/incidents/_search?q=_id:1h2cwGoBik2Q9Sh5OShg&pretty=true

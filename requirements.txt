@@ -1,0 +1,4 @@
+Flask==0.10.1
+elasticsearch==6.3.1
+requests==2.22.0
+elasticsearch-loader==0.5.0
